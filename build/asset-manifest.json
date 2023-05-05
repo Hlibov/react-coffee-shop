@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c51a7d51.css",
+    "main.js": "/static/js/main.998b7d5c.js",
+    "static/media/bg-paper.jpg": "/static/media/bg-paper.01cfb75cfbea3e3ad741.jpg",
+    "static/media/coffee-shop_2x.jpg": "/static/media/coffee-shop_2x.30624dc600acd0364861.jpg",
+    "static/media/girl-with-coffee.jpg": "/static/media/girl-with-coffee.41cd2f7c7905633ca679.jpg",
+    "static/media/solimo-coffee.jpg": "/static/media/solimo-coffee.8132365cfd3695272196.jpg",
+    "static/media/coffee-839233_1920.jpg": "/static/media/coffee-839233_1920.011ededc4b847df5bb8b.jpg",
+    "index.html": "/index.html",
+    "main.c51a7d51.css.map": "/static/css/main.c51a7d51.css.map",
+    "main.998b7d5c.js.map": "/static/js/main.998b7d5c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c51a7d51.css",
+    "static/js/main.998b7d5c.js"
+  ]
+}

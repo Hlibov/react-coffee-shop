@@ -1,0 +1,55 @@
+@import '../../scss/root.scss';
+
+.footer {
+  padding: 100px 0 20px;
+  text-align: center;
+
+  @include media('>=tablet') {
+    padding: 52px 0 20px;
+  }
+
+  &_holder {
+    max-width: 355px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &_logo {
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    transform: translateX(-50%);
+
+    @include media('>=tablet') {
+      left: -8px;
+      top: 0;
+      transform: translate(-35%, -35%);
+    }
+  }
+
+  &_menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &_menu-item {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+
+    @include media('>=tablet') {
+      width: 33.333%;
+    }
+
+    & + & {
+      @include media('<tablet') {
+        margin-top: 15px;
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+}

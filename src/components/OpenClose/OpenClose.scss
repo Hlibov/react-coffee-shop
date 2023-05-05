@@ -1,0 +1,8 @@
+@import '../../scss/root.scss';
+
+.open-close {
+  position: relative;
+  @include media('>=tablet') {
+    display: none;
+  }
+}

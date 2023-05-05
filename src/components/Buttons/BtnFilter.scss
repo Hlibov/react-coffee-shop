@@ -1,0 +1,16 @@
+@import '../../scss/root.scss';
+.btn-filter {
+  .btn {
+    border: 0;
+
+    &.active {
+      background-color: $black-color;
+      color: $white-color;
+    }
+
+    &:hover {
+      background-color: $black-color;
+      color: $white-color;
+    }
+  }
+}

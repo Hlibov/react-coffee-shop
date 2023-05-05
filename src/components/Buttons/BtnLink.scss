@@ -1,0 +1,8 @@
+@import '../../scss/root.scss';
+
+.link-holder {
+  position: relative;
+  &_link {
+    color: inherit;
+  }
+}

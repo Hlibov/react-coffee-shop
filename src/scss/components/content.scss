@@ -1,0 +1,29 @@
+.content {
+  position: relative;
+  text-align: center;
+  padding: 60px 0 80px;
+
+  @include media('>=tablet') {
+    padding: 80px 0 100px;
+  }
+
+  &_text,
+  &_cards {
+    padding-top: 30px;
+
+    @include media('>=tablet') {
+      padding-top: 40px;
+    }
+  }
+
+  &_cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 440px;
+
+    @include media('>=tablet') {
+      max-width: 100%;
+    }
+  }
+}

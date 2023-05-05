@@ -1,0 +1,29 @@
+.decor {
+  --space: 25px;
+  --width: 29px;
+
+  padding: 20px 0 40px;
+
+  &_holder {
+    position: relative;
+    width: var(--width);
+    height: var(--width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &_line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 1px;
+
+    &._left {
+      left: calc((100% + var(--width) + var(--space)) * (-1));
+    }
+
+    &._right {
+      left: calc((100% + var(--space)));
+    }
+  }
+}

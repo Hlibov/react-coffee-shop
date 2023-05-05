@@ -1,0 +1,34 @@
+@import '../../scss/root.scss';
+
+.hero {
+  margin-top: -64px;
+  padding: 124px 0 84px;
+  position: relative;
+  color: $white-color;
+  text-align: center;
+
+  &._lg {
+    padding: 164px 0 200px;
+  }
+
+  &_headline {
+    position: relative;
+    color: inherit;
+  }
+
+  &_headline-title {
+    color: inherit;
+  }
+
+  &_suptext {
+    position: relative;
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+
+    @include media('>=tablet') {
+      font-size: 24px;
+    }
+  }
+}

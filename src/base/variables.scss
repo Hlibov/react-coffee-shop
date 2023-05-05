@@ -1,0 +1,4 @@
+// container size
+$full-container-size: 1200px;
+$padding-container: 20px;
+$container-size: calc(var($full-container-size) - (2 * var($padding-container));

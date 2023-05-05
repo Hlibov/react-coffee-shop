@@ -1,0 +1,170 @@
+$breakpoints: (
+  'full': 1920px,
+  'xl': 1680px,
+  'macbook': 1440px,
+  'ipad-pro': 1366px,
+  'desktop-md': 1200px,
+  'desktop': 1024px,
+  'tablet': 768px,
+  'phone': 667px,
+  'phone-md': 568px,
+  'phone-sm': 480px,
+  'phone-xs': 375px,
+);
+// ligatured operators ≥ ≤
+
+// keywords
+$media-expressions: (
+  'iphoneX':
+    '(min-width: 812px) and (max-height: 414px) and (orientation: landscape)',
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)',
+);
+
+// Colors theme
+$primary-color: #2e2554;
+$secondary-color: #eee;
+$success-color: #535354;
+$danger-color: #fb3b64;
+$info-color: #fdb72c;
+$fast-color: #2e2554;
+$smart-color: #3c3d3f;
+$body-color: #424242;
+$white-color: #fff;
+$black-color: #000;
+$light-color: #eee;
+$idle-color: #f6f0ea;
+$careful-color: #553bf8;
+$alt-color: #3d316f;
+$other-color: #ffcf49;
+
+$brand-color: #637b8c;
+$accent-color: #e25262;
+// $accent-color: $brand-color;
+
+$base-text: $black-color;
+
+// font-family
+$base-main-font: 'Merienda';
+$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font: $base-main-font, $base-font-sans-serif;
+$accent-font: $base-font;
+
+// device screen height size
+$full-viewport-height: var(--full-viewport);
+
+// Headers
+// name use for media query `<${name}`. See `$breakpoints` variable for a possible key.
+$h1-h6-font-size: (
+  // --------- h1 ---- h2 ----h3 ---- h4 -- h5 -- h6 ---
+  'default': (4rem, 2.4rem, 2.2rem, 2rem, 17px, 16px),
+  'tablet': (30px, 22px, 20px, 18px, 17px, 16px)
+);
+
+// Container
+$gutter: 20px;
+$container: (
+  'default': 840px,
+  'lg': 1182px,
+);
+
+// Buttons size
+//
+// x - top/bottom padding
+// y - left/right padding
+// b - border
+// r - radius
+// fz - font-size
+//
+$btnsSize: (
+  'default': (
+    'default': (
+      'y': 10px,
+      'x': 20px,
+      'b': 1px,
+      'r': 3px,
+      'fz': 13px,
+    ),
+    // if need other size button
+    'alt':
+      (
+        'y': 8px,
+        'x': 10px,
+        'b': 1px,
+        'r': 5px,
+        'fz': 14px,
+      ),
+    'sm': (
+      'y': 10px,
+      'x': 10px,
+      'b': 1px,
+      'r': 0px,
+      'fz': 12px,
+    ),
+  ),
+  'tablet': (
+    'default': (
+      'y': 1rem,
+      'x': 2rem,
+      'b': 1px,
+      'r': 3px,
+      'fz': 13px,
+    ),
+  ),
+);
+// Input padding left and right
+$input-padding-x: map-get(
+  map-get(map-get($btnsSize, 'default'), 'default'),
+  'x'
+);
+
+// Form elements styling
+$input-color: #4b4a4a;
+$input-placeholder-color: lighten($input-color, 20%);
+$input-bg-color: white;
+$input-radius: 3px;
+$input-border-color: #eee;
+$input-focus-border-color: darken($input-border-color, 13%);
+
+$form-theme-color: $brand-color; // checkbox, radio, datepicker theme color
+$checkbox-size: 18px;
+$radio-size: $checkbox-size;
+
+$label-fz: 13px;
+$label-color: $input-color;
+
+$error-color: #e04562;
+$error-bg-color: lighten($error-color, 35%);
+
+$form-col-gutter: 15px;
+$form-row-margin: $form-col-gutter * 1.5;
+
+$colors: (
+  'white': #ffffff,
+  'black': #000000,
+  'brand': $brand-color,
+  'brand-dark': darken($brand-color, 10%),
+  'brand-light': lighten($brand-color, 10%),
+  'accent': $accent-color,
+  'accent-dark': darken($accent-color, 10%),
+  'accent-light': lighten($accent-color, 10%),
+  'text': #3a3a3a,
+);
+
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@function cl($name, $opacity: false) {
+  @if $opacity {
+    @return rgba(var(--color-#{unquote($name)}--rgb), $opacity);
+  } @else {
+    @return var(--color-#{unquote($name)});
+  }
+}
